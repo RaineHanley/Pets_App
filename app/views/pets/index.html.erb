@@ -1,8 +1,7 @@
 <h1>All pets</h1>
-<% @pets.each do |photo| %>
-  <h2><%= pet.name %></h2>
-  <p>Width: <%= photo.width %></p>
-  <p>Height: <%= photo.height %></p>
+<% @pets.each do |pet| %>
+  <p>Animal: <%= pet.animal %></p>
+  <p>Breed: <%= pet.breed %></p>
 <% end %>
 
 <%= link_to "More Info", pet %>
@@ -37,5 +36,17 @@
   <div>
     <%= form.submit %>
   </div>
+  <h1>Pets</h1>
+
+<ul>
+  <% @pets.each do |article| %>
+    <li>
+      <%= link_to pet.title, pet %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Pet", new_pet_path %>
+
 <% end%>
 
